@@ -1,0 +1,9 @@
+{
+  "timestamp": 1646453661085,
+  "id": 0,
+  "proof": 14139,
+  "previousBlockHash": 1,
+  "transactions": [
+    "Genesis Block"
+  ]
+}

@@ -1,2 +1,2 @@
-# vanillablockchain1
-Create a vanilla blockchain using Javascript
+# sugar-blockchain-js
+Create a sugar blockchain using Javascript

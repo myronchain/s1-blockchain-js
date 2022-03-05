@@ -2,7 +2,8 @@
   "name": "vanillablockchain1",
   "version": "1.0.0",
   "description": "Create a vanilla blockchain using Javascript",
-  "main": ".#blockchain.js",
+  "main": ".#app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

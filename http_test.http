@@ -1,0 +1,84 @@
+# 查看链
+GET http://localhost:3002/api/chain
+Accept: application/json
+
+###
+
+# 查看邻居节点
+GET http://localhost:3002/api/nodes/neighbors
+Accept: application/json
+
+###
+
+# 挖矿
+GET http://localhost:3002/api/mine
+Accept: application/json
+
+###
+
+# 注册节点，添加本节点的邻居节点
+POST http://localhost:3002/api/nodes/register
+Content-Type: application/json
+
+{
+    "ip": "127.0.0.1",
+    "port": 3002
+}
+
+###
+
+# 创建交易
+POST http://localhost:3002/api/transactions/new
+Content-Type: application/json
+
+{
+    "sender": "sender",
+    "receiver": "receiver",
+    "value": 20
+}
+
+###
+
+# 同步区块
+POST http://localhost:3002/api/nodes/resolve
+Content-Type: application/json
+
+{
+    "chain": {
+        "chain": [
+            {
+                "timestamp": 1646453661085,
+                "id": 0,
+                "proof": 14139,
+                "previousBlockHash": 1,
+                "transactions": [
+                    "Genesis Block"
+                ]
+            },
+            {
+                "timestamp": 1646455792732,
+                "id": 1,
+                "proof": 47727,
+                "previousBlockHash": "9e29d119eb47ed2391ae02f9654275e18b1e0ef24eaef0d05f966ddb97720000"
+            },
+            {
+                "timestamp": 1646455817138,
+                "id": 2,
+                "proof": 119571,
+                "previousBlockHash": "8b568b03d61ae41770292d692a1845b618b94e2502ac9e0780824eadc4fe0000"
+            },
+            {
+                "timestamp": 1646455947485,
+                "id": 3,
+                "proof": 133280,
+                "previousBlockHash": "e55c00ba79e56ec47941b86da4147d635bafcd35973bc32f4888916f8fb70000"
+            }
+        ],
+        "difficulty": 4,
+        "_packTransactions": []
+    }
+}
+
+###
+
+
