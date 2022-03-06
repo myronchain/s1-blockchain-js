@@ -1,23 +1,23 @@
 # 查看链
-GET http://localhost:3002/api/chain
+GET http://localhost:3001/api/chain
 Accept: application/json
 
 ###
 
 # 查看邻居节点
-GET http://localhost:3002/api/nodes/neighbors
+GET http://localhost:3001/api/nodes/neighbors
 Accept: application/json
 
 ###
 
 # 挖矿
-GET http://localhost:3002/api/mine
+GET http://localhost:3001/api/mine
 Accept: application/json
 
 ###
 
 # 注册节点，添加本节点的邻居节点
-POST http://localhost:3002/api/nodes/register
+POST http://localhost:3001/api/nodes/register
 Content-Type: application/json
 
 {
@@ -40,7 +40,7 @@ Content-Type: application/json
 ###
 
 # 同步区块
-POST http://localhost:3002/api/nodes/resolve
+POST http://localhost:3001/api/nodes/resolve
 Content-Type: application/json
 
 {

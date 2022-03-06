@@ -5,7 +5,7 @@ import rp from 'request'
 import minimist from 'minimist'
 import BlockChain from './blockchain.js';
 
-const defaultPort = 3002;
+const defaultPort = 3001;
 
 let nodeDiscovery = async function (thisNode, neighborNode) {
     if (_.isEqual(thisNode, neighborNode) || _.some(neighbors, neighborNode) || neighbors.length >= 4) {
@@ -111,8 +111,7 @@ _app.post('/api/nodes/register', (req, res) => {
     // 注册节点
     let newNode = _.pick(req.body, ['ip', 'port']);
     neighbors.push(newNode);
-    console.log('new node detected');
-    console.log(newNode);
+    console.log('new node detected. Node info: ' + JSON.stringify(newNode));
     res.send({
         message: 'Node ' + newNode.ip + ':' + newNode.port + ' is added to my network'
     });
